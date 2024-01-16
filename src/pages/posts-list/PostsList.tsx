@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from './PostsList.module.css';
 import PostService from "../../entities/post/api/PostService";
-import Button from "../../shared/button/Button";
+import PostCard from "../../entities/post/PostCard";
 
 export interface IPost {
     userId: number;
@@ -30,16 +30,11 @@ const PostsList = () => {
         },)
     }
 
-
     return (
         <div className={styles.posts}>
             <h1 className={styles.h1}>Посты на актуальные темы</h1>
             {posts.map((post) => (
-                <div className={styles.post} key={post.id}>
-                    <h2 className={styles.header}>{post.id}. {post.title}</h2>
-                    <p className={styles.text}>{post.body}</p>
-                    <Button>Просмотр</Button>
-                </div>
+                <PostCard id={post.id} title={post.title} body={post.body} key={post.id}/>
             ))}
         </div>
     );
