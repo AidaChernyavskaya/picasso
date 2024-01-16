@@ -1,0 +1,39 @@
+@import "../../app/styles/variables"
+
+.container
+  display: flex
+  align-items: start
+  flex-direction: column
+  margin: 5rem auto 0 auto
+  width: 85%
+  @media (max-width: 700px)
+    width: 95%
+
+.info
+  display: flex
+  justify-content: start
+  align-items: center
+  margin-bottom: 3rem
+
+.attention
+  font-style: italic
+  font-size: 1.6rem
+  margin-left: 2rem
+
+.post
+  border: solid .5rem $background-green-light
+  border-radius: 1.5rem
+  &:hover
+    border: solid .5rem $background-green
+    .title
+      background: $background-green
+
+
+.title
+  font-size: 2.2rem
+  background: $background-green-light
+  padding: 2.5rem 3rem
+
+.body
+  font-size: 1.8rem
+  padding: 2.5rem 3rem

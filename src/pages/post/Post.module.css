@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin: 5rem auto 0 auto;
+  width: 85%;
+}
+@media (max-width: 700px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.attention {
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+}
+
+.post {
+  border: solid 0.5rem #E9FFE5;
+  border-radius: 1.5rem;
+}
+.post:hover {
+  border: solid 0.5rem #CFF4C9;
+}
+.post:hover .title {
+  background: #CFF4C9;
+}
+
+.title {
+  font-size: 2.2rem;
+  background: #E9FFE5;
+  padding: 2.5rem 3rem;
+}
+
+.body {
+  font-size: 1.8rem;
+  padding: 2.5rem 3rem;
+}
+
+/*# sourceMappingURL=Post.module.css.map */

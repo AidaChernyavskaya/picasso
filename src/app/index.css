@@ -13,6 +13,11 @@ html {
     margin: 0 1rem;
   }
 }
+@media (max-width: 500px) {
+  html {
+    font-size: 48%;
+  }
+}
 
 body {
   font-family: "Roboto Light", sans-serif;
