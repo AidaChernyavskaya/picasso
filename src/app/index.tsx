@@ -1,10 +1,11 @@
 import React from 'react';
 import './index.css';
+import PostsList from "../pages/posts-list/PostsList";
 
 function App() {
   return (
     <div className="App">
-      <h1>Project initialize</h1>
+      <PostsList/>
     </div>
   );
 }
