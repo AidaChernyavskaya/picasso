@@ -16,7 +16,8 @@
   background: $background-green-light
   border-radius: 1.5rem
   display: grid
-  grid-template-columns: minmax(30rem, max-content) minmax(5rem, 20rem) max-content
+  width: 85%
+  grid-template-columns: minmax(min-content, max-content) minmax(5rem, 1fr) max-content
   gap: 2rem
   align-items: center
   padding: 2rem 2.5rem
@@ -25,6 +26,8 @@
   margin-bottom: 2rem
   &:hover
     background: $background-green
+  @media (max-width: 700px)
+    width: 95%
   @media (max-width: 500px)
     grid-template-columns: 1fr
     grid-template-rows: max-content auto max-content
