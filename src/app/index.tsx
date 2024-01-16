@@ -1,12 +1,13 @@
 import React from 'react';
 import './index.css';
-import PostsList from "../pages/posts-list/PostsList";
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-    <div className="App">
-      <PostsList/>
-    </div>
+      <BrowserRouter>
+        <AppRouter/>
+      </BrowserRouter>
   );
 }
 

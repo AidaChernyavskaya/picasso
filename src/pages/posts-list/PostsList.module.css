@@ -22,7 +22,6 @@
   align-items: center;
   padding: 2rem 2.5rem;
   transition: all 0.2s;
-  cursor: pointer;
   margin-bottom: 2rem;
 }
 .post:hover {
