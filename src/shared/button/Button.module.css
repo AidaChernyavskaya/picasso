@@ -1,0 +1,19 @@
+.button {
+  border-radius: 1.5rem;
+  background: #646464;
+  border: none;
+  padding: 1rem 3rem;
+  color: #ffffff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  justify-self: center;
+}
+.button:hover {
+  background: #474747;
+}
+.button:active {
+  transform: translateY(0.1rem);
+}
+
+/*# sourceMappingURL=Button.module.css.map */

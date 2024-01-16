@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from './PostsList.module.css';
 import PostService from "../../entities/post/api/PostService";
+import Button from "../../shared/button/Button";
 
 export interface IPost {
     userId: number;
@@ -37,7 +38,7 @@ const PostsList = () => {
                 <div className={styles.post} key={post.id}>
                     <h2 className={styles.header}>{post.id}. {post.title}</h2>
                     <p className={styles.text}>{post.body}</p>
-                    <button className={styles.button}>Просмотр</button>
+                    <Button>Просмотр</Button>
                 </div>
             ))}
         </div>
