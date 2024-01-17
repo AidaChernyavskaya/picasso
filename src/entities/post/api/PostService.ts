@@ -1,17 +1,24 @@
-import axios from "axios";
 import {IPost} from "../../../pages/posts-list/PostsList";
+import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
-export default class PostService {
-    static async getAll(limit=10, page=1) {
-        return await axios.get<IPost[]>('https://jsonplaceholder.typicode.com/posts', {
-            params: {
-                _limit: limit,
-                _page: page
-            }
-        });
-    }
-
-    static async getById(id: number) {
-        return await axios.get('https://jsonplaceholder.typicode.com/posts/' + id);
-    }
-}
+export const postAPI = createApi({
+    reducerPath: 'postAPI',
+    baseQuery: fetchBaseQuery({
+        baseUrl: 'https://jsonplaceholder.typicode.com/'
+    }),
+    endpoints: (build) => ({
+        fetchAllPosts: build.query<IPost[], number>({
+            query: (limit: number = 5) => ({
+                url: `/posts`,
+                params: {
+                    _limit: limit
+                }
+            }),
+        }),
+        getById: build.query<IPost, number>({
+            query: (id: number = 1) => ({
+                url: `/posts/${id}`,
+            }),
+        }),
+    })
+})
