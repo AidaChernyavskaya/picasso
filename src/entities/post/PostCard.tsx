@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, LegacyRef} from 'react';
 import styles from "./PostCard.module.css";
 import Button from "../../shared/button/Button";
 import {Link} from "react-router-dom";
