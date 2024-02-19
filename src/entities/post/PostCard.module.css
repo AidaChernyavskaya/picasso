@@ -8,7 +8,8 @@
   align-items: center;
   padding: 2rem 2.5rem;
   transition: all 0.2s;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem auto;
+  list-style: none;
 }
 .post:hover {
   background: #CFF4C9;

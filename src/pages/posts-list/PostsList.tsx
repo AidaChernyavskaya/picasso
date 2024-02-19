@@ -46,27 +46,15 @@ const PostsList = () => {
                 {posts && posts.map((post, index, arr) => (
                     index === arr.length - 1 ? (
                         <li key={post.id} ref={lastPost}>
-                            <PostCard
-                                id={post.id}
-                                title={post.title}
-                                body={post.body}
-                            />
+                            <PostCard post={post}/>
                         </li>
                     ) : index === 0 ? (
                         <li key={post.id} ref={firstPost}>
-                            <PostCard
-                                id={post.id}
-                                title={post.title}
-                                body={post.body}
-                            />
+                            <PostCard post={post}/>
                         </li>
                     ) : (
                         <li key={post.id}>
-                            <PostCard
-                                id={post.id}
-                                title={post.title}
-                                body={post.body}
-                            />
+                            <PostCard post={post}/>
                         </li>
                     )
                 ))}
