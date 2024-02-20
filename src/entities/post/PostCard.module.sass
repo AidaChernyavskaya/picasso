@@ -1,7 +1,6 @@
 @import "../../app/styles/variables"
 
 .post
-  background: $background-green-light
   border-radius: 1.5rem
   display: grid
   width: 85%
@@ -12,13 +11,31 @@
   transition: all .2s
   margin: 0 auto 2rem auto
   list-style: none
-  &:hover
-    background: $background-green
   @media (max-width: 700px)
     width: 95%
   @media (max-width: 500px)
     grid-template-columns: 1fr
     grid-template-rows: max-content auto max-content
+
+.green
+  background: $background-green-light
+  &:hover
+    background: $background-green
+
+.blue
+  background: $background-blue-light
+  &:hover
+    background: $background-blue
+
+.pink
+  background: $background-pink-light
+  &:hover
+    background: $background-pink
+
+.purple
+  background: $background-purple-light
+  &:hover
+    background: $background-purple
 
 .header
   font-size: 1.6rem

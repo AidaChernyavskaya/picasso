@@ -1,5 +1,4 @@
 .post {
-  background: #E9FFE5;
   border-radius: 1.5rem;
   display: grid;
   width: 85%;
@@ -11,9 +10,6 @@
   margin: 0 auto 2rem auto;
   list-style: none;
 }
-.post:hover {
-  background: #CFF4C9;
-}
 @media (max-width: 700px) {
   .post {
     width: 95%;
@@ -24,6 +20,34 @@
     grid-template-columns: 1fr;
     grid-template-rows: max-content auto max-content;
   }
+}
+
+.green {
+  background: #E9FFE5;
+}
+.green:hover {
+  background: #CFF4C9;
+}
+
+.blue {
+  background: #E5F6FF;
+}
+.blue:hover {
+  background: #C7E7F9;
+}
+
+.pink {
+  background: #FFE5FB;
+}
+.pink:hover {
+  background: #FECFF6;
+}
+
+.purple {
+  background: #E9E5FF;
+}
+.purple:hover {
+  background: #D1CCF4;
 }
 
 .header {
