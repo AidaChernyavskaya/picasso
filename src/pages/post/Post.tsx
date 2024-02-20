@@ -4,6 +4,7 @@ import styles from './Post.module.css';
 import {postAPI} from "../../entities/post/api/PostService";
 import {useNavigate} from "react-router-dom";
 import Loader from "../../shared/loader/Loader";
+import {getColorById} from "../../entities/post/PostCard";
 
 export const getPostId = () => {
     const pathname = window.location.pathname;
@@ -23,7 +24,7 @@ const Post = () => {
             </div>
             {isLoading
             ? <Loader/>
-            : <div className={styles.post}>
+            : <div className={post && styles[`post_${getColorById(post.id)}`]}>
                     <h1 className={styles.title}>{post?.title}</h1>
                     <p className={styles.body}>{post?.body}</p>
               </div>

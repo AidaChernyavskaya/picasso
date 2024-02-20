@@ -9,7 +9,7 @@ export interface PostCardProps {
     post: IPost;
 }
 
-const getColorById = (id: number): string => {
+export const getColorById = (id: number): string => {
     const colors = ['green', 'blue', 'pink', 'purple'];
     return colors[(id - 1)%4];
 }

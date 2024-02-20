@@ -14,7 +14,7 @@ export interface IPost {
 
 const PostsList = () => {
     const [postStart,setPostStart]=useState(0)
-    const {data: posts, isLoading} = postAPI.useFetchAllPostsQuery({limit: 10, page: postStart});
+    const {data: posts, isLoading} = postAPI.useFetchAllPostsQuery({limit: 15, page: postStart});
 
     const {ref: lastPost, inView: inViewLastPost} = useInView({
         threshold: 0.7
