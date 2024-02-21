@@ -26,14 +26,12 @@ const PostsList = () => {
 
     useEffect(() => {
         if(inViewLastPost) {
-            console.log('last');
-            setPostStart((postStart) => postStart + 1)
+            setPostStart((postStart) => postStart + 1);
         }
     }, [inViewLastPost]);
 
     useEffect(() => {
         if(inViewFirstPost) {
-            console.log('first');
             setPostStart((postStart) => postStart > 0 ? postStart - 1 : 0);
         }
     }, [inViewFirstPost]);
